@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="ip" path="ip" id="208be587-5791-42e9-9d94-f1dc241189e4">
+  <con:settings id="c920d2df-749d-4ae7-b627-321659904782">
+    <con:setting id="208be587-5791-42e9-9d94-f1dc241189e4fileName">ip</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="de2111cd-47e5-4b48-b0c8-24b9a76bd3b6" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="23af0069-7f67-47a1-99c7-b6d40ff8fbd6" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://httpbin.org</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://localhost/ip</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

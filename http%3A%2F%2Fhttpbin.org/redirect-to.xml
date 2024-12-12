@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="redirect-to" path="/redirect-to" id="fc09dc41-30af-4112-ad61-8968b15644eb">
+  <con:settings id="68acc995-a826-4b36-9d2c-7b2cb81eff72">
+    <con:setting id="fc09dc41-30af-4112-ad61-8968b15644ebfileName">redirect-to</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="c1094843-a218-4c32-bc72-2423ba5e5088" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="c43ec196-0bf0-4519-bfa3-8aaeede9b0d2" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://httpbin.org</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="5caaa985-bc71-4953-aa3b-d18e0640382b" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>url</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>status_code</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="fbd6b630-ba07-4c99-ad12-3ad9d305a262" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://httpbin.org</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://httpbin.org/get</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="status_code" value="400"/>
+        <con:entry key="url" value="https://httpbin.org/get"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>url</con:entry>
+        <con:entry>status_code</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

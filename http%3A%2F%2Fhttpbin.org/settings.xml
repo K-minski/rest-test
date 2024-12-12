@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="dab529ed-c8ac-4512-a17e-5644ddd418e4" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://httpbin.org" type="rest" definitionUrl="file:/C:/Example/test.wadl" basePath="">
+  <con:settings id="2874d0aa-791f-4f62-a68e-183eebf65e04">
+    <con:setting id="dab529ed-c8ac-4512-a17e-5644ddd418e4fileName">http%3A%2F%2Fhttpbin.org</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="file:/C:/Example/test.wadl">
+    <con:part>
+      <con:url>file:/C:/Example/test.wadl</con:url>
+      <con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="http://httpbin.org"/>
+  <resources base="http://httpbin.org">
+    <resource path="status/200" id="200">
+      <doc xml:lang="en" title="200"/>
+      <method name="GET" id="200">
+        <doc xml:lang="en" title="200"/>
+        <request/>
+        <response status="401">
+          <representation mediaType="application/json" element="log:Fault" xmlns:log="http://httpbin.org/status/401"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json" element="log:Response" xmlns:log="http://httpbin.org/status/200"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content>
+      <con:type>http://wadl.dev.java.net/2009/02</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://httpbin.org</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

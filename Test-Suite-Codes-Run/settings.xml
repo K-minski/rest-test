@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="626e3bf0-d6fa-4d6d-82d0-e1f626c8903f" name="Test Suite Codes Run">
+  <con:settings id="3190be7e-d632-47d0-8007-373c42c1a8bf">
+    <con:setting id="626e3bf0-d6fa-4d6d-82d0-e1f626c8903ffileName">Test-Suite-Codes-Run</con:setting>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="GeneratableAllureReport@Folder">C:\Example\Allure\</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

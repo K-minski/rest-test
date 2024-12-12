@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="1024c266-ba32-42a7-aea7-ccd03186bfc4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Codes" searchProperties="true" timeout="0">
+  <con:settings id="b974accc-677f-4437-985d-a952b258c273">
+    <con:setting id="1024c266-ba32-42a7-aea7-ccd03186bfc4fileName">Codes</con:setting>
+  </con:settings>
+  <con:testStep type="groovy" name="Groovy Script" id="b3c89bf8-afc6-44ab-9be6-17761a7b1db6">
+    <con:settings/>
+    <con:config>
+      <script>def env = context.expand( '${#Project#env}' )
+
+testRunner.testCase.testSuite.project.setActiveEnvironment(env)</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="200" id="498fa7d6-71b9-4a22-80a2-83241f2454fe">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="http://httpbin.org" resourcePath="/status/{code}" methodName="getStatus" xsi:type="con:RestRequestStep">
+      <con:restRequest name="200" id="f771987b-af4b-4522-8724-10924234b6d2" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://httpbin.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://httpbin.org/status/200</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5d5aa0bc-0009-4e33-b3e4-2fd6897beffb" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="code" value="200"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>code</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="401" id="2792bd74-f990-4c52-affd-0dedeac27127">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="http://httpbin.org" resourcePath="/status/{code}" methodName="getStatus" xsi:type="con:RestRequestStep">
+      <con:restRequest name="401" id="f771987b-af4b-4522-8724-10924234b6d2" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://httpbin.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://httpbin.org/status/200</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8ec11284-b0b7-4e93-a3dd-7d95bab74ece" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>401</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="code" value="401"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>code</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="500" id="4c57e0eb-1f2c-47a4-9396-2bb40b2778c6">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="http://httpbin.org" resourcePath="/status/{code}" methodName="getStatus" xsi:type="con:RestRequestStep">
+      <con:restRequest name="500" id="f771987b-af4b-4522-8724-10924234b6d2" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://httpbin.org</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://httpbin.org/status/200</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3579f723-5675-4b21-9144-2b75db8297e8" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="code" value="500"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>code</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>env</con:name>
+      <con:value>Local Virt</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

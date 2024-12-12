@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="status" path="/status/{code}" id="4c12329e-3818-49f2-a7da-0e9f33cc84c4">
+  <con:settings id="70ad2089-b83c-4af1-a5d8-f296111806fb">
+    <con:setting id="4c12329e-3818-49f2-a7da-0e9f33cc84c4fileName">status</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>code</con:name>
+      <con:value>code</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>code</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getStatus" id="1d2402c8-6f70-4e2e-9637-698e28ffd6fe" method="GET">
+    <con:settings>
+      <con:setting id="RecordResponseRepresentations">false</con:setting>
+    </con:settings>
+    <con:parameters/>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401 501</con:status>
+      <con:params/>
+      <con:element xmlns:ns="http://httpbin.org/status/200">ns:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ns="http://httpbin.org/status/200">ns:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=utf-8</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="f771987b-af4b-4522-8724-10924234b6d2" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://httpbin.org</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://httpbin.org/status/200</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="code" value="200"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>code</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="fba391a6-6eae-4469-8e38-5437b8972d02">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="3ea0a611-0619-46d3-9d87-63f96dfe4ef5">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="b8d32ce6-58c7-4107-86c6-3db8382043f8">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>
